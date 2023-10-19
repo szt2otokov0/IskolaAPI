@@ -1,4 +1,5 @@
 using IskolaAPI.Controllers;
+using IskolaAPI.Models;
 
 namespace IskolaAPI
 {
@@ -11,7 +12,7 @@ namespace IskolaAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
-            var dbCon = new DbController();
+            builder.Services.AddDbContext<iskolaContext>();
 
             var app = builder.Build();
 
